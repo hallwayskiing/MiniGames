@@ -28,225 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.welcLabel = new System.Windows.Forms.Label();
-            this.logBtn = new System.Windows.Forms.Button();
-            this.regBtn = new System.Windows.Forms.Button();
-            this.userBox = new System.Windows.Forms.TextBox();
-            this.pwdBox = new System.Windows.Forms.TextBox();
-            this.userLabel = new System.Windows.Forms.Label();
-            this.pwdLabel = new System.Windows.Forms.Label();
-            this.logOK = new System.Windows.Forms.Button();
-            this.regOK = new System.Windows.Forms.Button();
-            this.codeBox = new System.Windows.Forms.TextBox();
-            this.codeLabel = new System.Windows.Forms.Label();
-            this.guessBtn = new System.Windows.Forms.Button();
-            this.typeBtn = new System.Windows.Forms.Button();
-            this.snakeBtn = new System.Windows.Forms.Button();
-            this.ballBtn = new System.Windows.Forms.Button();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            welcLabel = new Label();
+            logBtn = new Button();
+            regBtn = new Button();
+            userBox = new TextBox();
+            pwdBox = new TextBox();
+            userLabel = new Label();
+            pwdLabel = new Label();
+            logOK = new Button();
+            regOK = new Button();
+            codeBox = new TextBox();
+            codeLabel = new Label();
+            guessBtn = new Button();
+            typeBtn = new Button();
+            snakeBtn = new Button();
+            ballBtn = new Button();
+            backBtn = new Button();
+            SuspendLayout();
             // 
             // welcLabel
             // 
-            this.welcLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.welcLabel.Location = new System.Drawing.Point(280, 84);
-            this.welcLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.welcLabel.Name = "welcLabel";
-            this.welcLabel.Size = new System.Drawing.Size(518, 55);
-            this.welcLabel.TabIndex = 0;
-            this.welcLabel.Text = "Welcome to MiniGames!";
-            this.welcLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            welcLabel.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            welcLabel.Location = new Point(140, 46);
+            welcLabel.Name = "welcLabel";
+            welcLabel.Size = new Size(263, 30);
+            welcLabel.TabIndex = 0;
+            welcLabel.Text = "Welcome to MiniGames!";
+            welcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // logBtn
             // 
-            this.logBtn.Location = new System.Drawing.Point(436, 325);
-            this.logBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.logBtn.Name = "logBtn";
-            this.logBtn.Size = new System.Drawing.Size(190, 64);
-            this.logBtn.TabIndex = 1;
-            this.logBtn.Text = "Login";
-            this.logBtn.UseVisualStyleBackColor = true;
-            this.logBtn.Click += new System.EventHandler(this.logBtn_Click);
+            logBtn.Location = new Point(218, 178);
+            logBtn.Name = "logBtn";
+            logBtn.Size = new Size(95, 35);
+            logBtn.TabIndex = 1;
+            logBtn.Text = "Login";
+            logBtn.UseVisualStyleBackColor = true;
+            logBtn.Click += logBtn_Click;
             // 
             // regBtn
             // 
-            this.regBtn.Location = new System.Drawing.Point(436, 419);
-            this.regBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(190, 60);
-            this.regBtn.TabIndex = 2;
-            this.regBtn.Text = "Register";
-            this.regBtn.UseVisualStyleBackColor = true;
-            this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
+            regBtn.Location = new Point(218, 230);
+            regBtn.Name = "regBtn";
+            regBtn.Size = new Size(95, 33);
+            regBtn.TabIndex = 2;
+            regBtn.Text = "Register";
+            regBtn.UseVisualStyleBackColor = true;
+            regBtn.Click += regBtn_Click;
             // 
             // userBox
             // 
-            this.userBox.Location = new System.Drawing.Point(472, 219);
-            this.userBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.userBox.Name = "userBox";
-            this.userBox.Size = new System.Drawing.Size(330, 38);
-            this.userBox.TabIndex = 3;
-            this.userBox.Visible = false;
+            userBox.Location = new Point(236, 120);
+            userBox.Name = "userBox";
+            userBox.Size = new Size(167, 23);
+            userBox.TabIndex = 3;
+            userBox.Visible = false;
             // 
             // pwdBox
             // 
-            this.pwdBox.Location = new System.Drawing.Point(472, 315);
-            this.pwdBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.pwdBox.Name = "pwdBox";
-            this.pwdBox.Size = new System.Drawing.Size(330, 38);
-            this.pwdBox.TabIndex = 4;
-            this.pwdBox.UseSystemPasswordChar = true;
-            this.pwdBox.Visible = false;
+            pwdBox.Location = new Point(236, 173);
+            pwdBox.Name = "pwdBox";
+            pwdBox.Size = new Size(167, 23);
+            pwdBox.TabIndex = 4;
+            pwdBox.UseSystemPasswordChar = true;
+            pwdBox.Visible = false;
             // 
             // userLabel
             // 
-            this.userLabel.AutoSize = true;
-            this.userLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.userLabel.Location = new System.Drawing.Point(278, 219);
-            this.userLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(181, 41);
-            this.userLabel.TabIndex = 5;
-            this.userLabel.Text = "Username:";
-            this.userLabel.Visible = false;
+            userLabel.AutoSize = true;
+            userLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            userLabel.Location = new Point(139, 120);
+            userLabel.Name = "userLabel";
+            userLabel.Size = new Size(91, 21);
+            userLabel.TabIndex = 5;
+            userLabel.Text = "Username:";
+            userLabel.Visible = false;
             // 
             // pwdLabel
             // 
-            this.pwdLabel.AutoSize = true;
-            this.pwdLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pwdLabel.Location = new System.Drawing.Point(280, 315);
-            this.pwdLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.pwdLabel.Name = "pwdLabel";
-            this.pwdLabel.Size = new System.Drawing.Size(171, 41);
-            this.pwdLabel.TabIndex = 6;
-            this.pwdLabel.Text = "Password:";
-            this.pwdLabel.Visible = false;
+            pwdLabel.AutoSize = true;
+            pwdLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            pwdLabel.Location = new Point(140, 173);
+            pwdLabel.Name = "pwdLabel";
+            pwdLabel.Size = new Size(86, 21);
+            pwdLabel.TabIndex = 6;
+            pwdLabel.Text = "Password:";
+            pwdLabel.Visible = false;
             // 
             // logOK
             // 
-            this.logOK.Location = new System.Drawing.Point(344, 484);
-            this.logOK.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.logOK.Name = "logOK";
-            this.logOK.Size = new System.Drawing.Size(190, 51);
-            this.logOK.TabIndex = 7;
-            this.logOK.Text = "Login";
-            this.logOK.UseVisualStyleBackColor = true;
-            this.logOK.Visible = false;
-            this.logOK.Click += new System.EventHandler(this.logOK_Click);
+            logOK.Location = new Point(172, 265);
+            logOK.Name = "logOK";
+            logOK.Size = new Size(95, 28);
+            logOK.TabIndex = 7;
+            logOK.Text = "Login";
+            logOK.UseVisualStyleBackColor = true;
+            logOK.Visible = false;
+            logOK.Click += logOK_Click;
             // 
             // regOK
             // 
-            this.regOK.Location = new System.Drawing.Point(344, 484);
-            this.regOK.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.regOK.Name = "regOK";
-            this.regOK.Size = new System.Drawing.Size(190, 51);
-            this.regOK.TabIndex = 8;
-            this.regOK.Text = "Register";
-            this.regOK.UseVisualStyleBackColor = true;
-            this.regOK.Visible = false;
-            this.regOK.Click += new System.EventHandler(this.regOK_Click);
+            regOK.Location = new Point(172, 265);
+            regOK.Name = "regOK";
+            regOK.Size = new Size(95, 28);
+            regOK.TabIndex = 8;
+            regOK.Text = "Register";
+            regOK.UseVisualStyleBackColor = true;
+            regOK.Visible = false;
+            regOK.Click += regOK_Click;
             // 
             // codeBox
             // 
-            this.codeBox.Location = new System.Drawing.Point(472, 410);
-            this.codeBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.codeBox.Name = "codeBox";
-            this.codeBox.Size = new System.Drawing.Size(330, 38);
-            this.codeBox.TabIndex = 5;
-            this.codeBox.Visible = false;
+            codeBox.Location = new Point(236, 225);
+            codeBox.Name = "codeBox";
+            codeBox.Size = new Size(167, 23);
+            codeBox.TabIndex = 5;
+            codeBox.Visible = false;
             // 
             // codeLabel
             // 
-            this.codeLabel.AutoSize = true;
-            this.codeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.codeLabel.Location = new System.Drawing.Point(344, 410);
-            this.codeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.codeLabel.Name = "codeLabel";
-            this.codeLabel.Size = new System.Drawing.Size(105, 41);
-            this.codeLabel.TabIndex = 10;
-            this.codeLabel.Text = "Code:";
-            this.codeLabel.Visible = false;
+            codeLabel.AutoSize = true;
+            codeLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            codeLabel.Location = new Point(172, 225);
+            codeLabel.Name = "codeLabel";
+            codeLabel.Size = new Size(54, 21);
+            codeLabel.TabIndex = 10;
+            codeLabel.Text = "Code:";
+            codeLabel.Visible = false;
             // 
             // guessBtn
             // 
-            this.guessBtn.Location = new System.Drawing.Point(280, 273);
-            this.guessBtn.Name = "guessBtn";
-            this.guessBtn.Size = new System.Drawing.Size(150, 46);
-            this.guessBtn.TabIndex = 11;
-            this.guessBtn.Text = "Guess";
-            this.guessBtn.UseVisualStyleBackColor = true;
-            this.guessBtn.Visible = false;
+            guessBtn.Location = new Point(140, 150);
+            guessBtn.Margin = new Padding(2);
+            guessBtn.Name = "guessBtn";
+            guessBtn.Size = new Size(75, 25);
+            guessBtn.TabIndex = 11;
+            guessBtn.Text = "Guess";
+            guessBtn.UseVisualStyleBackColor = true;
+            guessBtn.Visible = false;
             // 
             // typeBtn
             // 
-            this.typeBtn.Location = new System.Drawing.Point(648, 273);
-            this.typeBtn.Name = "typeBtn";
-            this.typeBtn.Size = new System.Drawing.Size(150, 46);
-            this.typeBtn.TabIndex = 12;
-            this.typeBtn.Text = "Type";
-            this.typeBtn.UseVisualStyleBackColor = true;
-            this.typeBtn.Visible = false;
+            typeBtn.Location = new Point(324, 150);
+            typeBtn.Margin = new Padding(2);
+            typeBtn.Name = "typeBtn";
+            typeBtn.Size = new Size(75, 25);
+            typeBtn.TabIndex = 12;
+            typeBtn.Text = "Type";
+            typeBtn.UseVisualStyleBackColor = true;
+            typeBtn.Visible = false;
+            typeBtn.Click += typeBtn_Click;
             // 
             // snakeBtn
             // 
-            this.snakeBtn.Location = new System.Drawing.Point(278, 419);
-            this.snakeBtn.Name = "snakeBtn";
-            this.snakeBtn.Size = new System.Drawing.Size(150, 46);
-            this.snakeBtn.TabIndex = 13;
-            this.snakeBtn.Text = "Snake";
-            this.snakeBtn.UseVisualStyleBackColor = true;
-            this.snakeBtn.Visible = false;
+            snakeBtn.Location = new Point(139, 230);
+            snakeBtn.Margin = new Padding(2);
+            snakeBtn.Name = "snakeBtn";
+            snakeBtn.Size = new Size(75, 25);
+            snakeBtn.TabIndex = 13;
+            snakeBtn.Text = "Snake";
+            snakeBtn.UseVisualStyleBackColor = true;
+            snakeBtn.Visible = false;
             // 
             // ballBtn
             // 
-            this.ballBtn.Location = new System.Drawing.Point(648, 419);
-            this.ballBtn.Name = "ballBtn";
-            this.ballBtn.Size = new System.Drawing.Size(150, 46);
-            this.ballBtn.TabIndex = 14;
-            this.ballBtn.Text = "Ball";
-            this.ballBtn.UseVisualStyleBackColor = true;
-            this.ballBtn.Visible = false;
+            ballBtn.Location = new Point(324, 230);
+            ballBtn.Margin = new Padding(2);
+            ballBtn.Name = "ballBtn";
+            ballBtn.Size = new Size(75, 25);
+            ballBtn.TabIndex = 14;
+            ballBtn.Text = "Ball";
+            ballBtn.UseVisualStyleBackColor = true;
+            ballBtn.Visible = false;
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(558, 484);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(190, 51);
-            this.backBtn.TabIndex = 15;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Visible = false;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            backBtn.Location = new Point(279, 265);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(95, 28);
+            backBtn.TabIndex = 15;
+            backBtn.Text = "Back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Visible = false;
+            backBtn.Click += backBtn_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 576);
-            this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.ballBtn);
-            this.Controls.Add(this.snakeBtn);
-            this.Controls.Add(this.typeBtn);
-            this.Controls.Add(this.guessBtn);
-            this.Controls.Add(this.codeLabel);
-            this.Controls.Add(this.codeBox);
-            this.Controls.Add(this.regOK);
-            this.Controls.Add(this.logOK);
-            this.Controls.Add(this.pwdLabel);
-            this.Controls.Add(this.userLabel);
-            this.Controls.Add(this.pwdBox);
-            this.Controls.Add(this.userBox);
-            this.Controls.Add(this.regBtn);
-            this.Controls.Add(this.logBtn);
-            this.Controls.Add(this.welcLabel);
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MiniGames";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(536, 316);
+            Controls.Add(backBtn);
+            Controls.Add(ballBtn);
+            Controls.Add(snakeBtn);
+            Controls.Add(typeBtn);
+            Controls.Add(guessBtn);
+            Controls.Add(codeLabel);
+            Controls.Add(codeBox);
+            Controls.Add(regOK);
+            Controls.Add(logOK);
+            Controls.Add(pwdLabel);
+            Controls.Add(userLabel);
+            Controls.Add(pwdBox);
+            Controls.Add(userBox);
+            Controls.Add(regBtn);
+            Controls.Add(logBtn);
+            Controls.Add(welcLabel);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MiniGames";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
