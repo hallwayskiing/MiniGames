@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace MiniGames
+﻿namespace MiniGames
 {
     public partial class TypeForm : Form
     {
@@ -103,12 +93,12 @@ namespace MiniGames
                 case "hardItem":
                     timeDelay = 8;
                     timeCount = 8;
-                    timeLabel.Text="8";
+                    timeLabel.Text = "8";
                     break;
                 case "crazyItem":
                     timeDelay = 6;
                     timeCount = 6;
-                    timeLabel.Text="6";
+                    timeLabel.Text = "6";
                     break;
             }
         }
