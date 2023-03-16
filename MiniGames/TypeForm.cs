@@ -41,6 +41,7 @@ namespace MiniGames
             timer1.Enabled = true;
             startBtn.Visible = false;
             subBtn.Visible = true;
+            difficultyToolStripMenuItem.Visible = false;
             inputBox.Enabled = true;
             inputBox.Focus();
             randomNum = random.Next(listLength);
@@ -86,6 +87,29 @@ namespace MiniGames
             {
                 e.Handled = true;
                 subBtn_Click(sender, e);
+            }
+        }
+
+        private void diffToolStrip_OnChange(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            switch (item.Name)
+            {
+                case "normalItem":
+                    timeDelay = 10;
+                    timeCount = 10;
+                    timeLabel.Text = "10";
+                    break;
+                case "hardItem":
+                    timeDelay = 8;
+                    timeCount = 8;
+                    timeLabel.Text="8";
+                    break;
+                case "crazyItem":
+                    timeDelay = 6;
+                    timeCount = 6;
+                    timeLabel.Text="6";
+                    break;
             }
         }
     }

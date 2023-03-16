@@ -40,6 +40,13 @@
             timer1 = new System.Windows.Forms.Timer(components);
             subBtn = new Button();
             endLabel = new Label();
+            menuStrip1 = new MenuStrip();
+            toolStripComboBox = new ToolStripMenuItem();
+            difficultyToolStripMenuItem = new ToolStripMenuItem();
+            normalItem = new ToolStripMenuItem();
+            hardItem = new ToolStripMenuItem();
+            crazyItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // inputBox
@@ -142,10 +149,52 @@
             // 
             endLabel.AutoSize = true;
             endLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            endLabel.Location = new Point(143, 205);
+            endLabel.Location = new Point(136, 205);
             endLabel.Name = "endLabel";
             endLabel.Size = new Size(0, 21);
             endLabel.TabIndex = 9;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripComboBox, difficultyToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(448, 25);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripComboBox
+            // 
+            toolStripComboBox.Name = "toolStripComboBox";
+            toolStripComboBox.Size = new Size(12, 21);
+            // 
+            // difficultyToolStripMenuItem
+            // 
+            difficultyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { normalItem, hardItem, crazyItem });
+            difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
+            difficultyToolStripMenuItem.Size = new Size(86, 21);
+            difficultyToolStripMenuItem.Text = "Difficulty(&D)";
+            // 
+            // normalItem
+            // 
+            normalItem.Name = "normalItem";
+            normalItem.Size = new Size(180, 22);
+            normalItem.Text = "Normal";
+            normalItem.Click += diffToolStrip_OnChange;
+            // 
+            // hardItem
+            // 
+            hardItem.Name = "hardItem";
+            hardItem.Size = new Size(180, 22);
+            hardItem.Text = "Hard";
+            hardItem.Click += diffToolStrip_OnChange;
+            // 
+            // crazyItem
+            // 
+            crazyItem.Name = "crazyItem";
+            crazyItem.Size = new Size(180, 22);
+            crazyItem.Text = "Crazy";
+            crazyItem.Click += diffToolStrip_OnChange;
             // 
             // TypeForm
             // 
@@ -162,9 +211,13 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(inputBox);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "TypeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Type";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +235,11 @@
         private System.Windows.Forms.Timer timer1;
         private Button subBtn;
         private Label endLabel;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripComboBox;
+        private ToolStripMenuItem difficultyToolStripMenuItem;
+        private ToolStripMenuItem normalItem;
+        private ToolStripMenuItem hardItem;
+        private ToolStripMenuItem crazyItem;
     }
 }
