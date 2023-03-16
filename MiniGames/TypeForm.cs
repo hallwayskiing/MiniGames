@@ -82,24 +82,16 @@
 
         private void diffToolStrip_OnChange(object sender, EventArgs e)
         {
-            ToolStripMenuItem item = (ToolStripMenuItem)sender;
-            switch (item.Name)
+            foreach (ToolStripMenuItem item in difficultyToolStripMenuItem.DropDownItems)
             {
-                case "normalItem":
-                    timeDelay = 10;
-                    timeCount = 10;
-                    timeLabel.Text = "10";
-                    break;
-                case "hardItem":
-                    timeDelay = 8;
-                    timeCount = 8;
-                    timeLabel.Text = "8";
-                    break;
-                case "crazyItem":
-                    timeDelay = 6;
-                    timeCount = 6;
-                    timeLabel.Text = "6";
-                    break;
+                if (item == sender)
+                {
+                    item.Checked = true;
+                    timeDelay = int.Parse((string)item.Tag);
+                    timeCount = timeDelay;
+                    timeLabel.Text = timeDelay.ToString();
+                }
+                else item.Checked = false;
             }
         }
     }

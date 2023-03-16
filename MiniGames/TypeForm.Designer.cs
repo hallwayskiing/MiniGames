@@ -41,7 +41,6 @@
             subBtn = new Button();
             endLabel = new Label();
             menuStrip1 = new MenuStrip();
-            toolStripComboBox = new ToolStripMenuItem();
             difficultyToolStripMenuItem = new ToolStripMenuItem();
             normalItem = new ToolStripMenuItem();
             hardItem = new ToolStripMenuItem();
@@ -156,20 +155,17 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripComboBox, difficultyToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { difficultyToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(448, 25);
             menuStrip1.TabIndex = 10;
             menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripComboBox
-            // 
-            toolStripComboBox.Name = "toolStripComboBox";
-            toolStripComboBox.Size = new Size(12, 21);
-            // 
             // difficultyToolStripMenuItem
             // 
+            difficultyToolStripMenuItem.Checked = true;
+            difficultyToolStripMenuItem.CheckState = CheckState.Checked;
             difficultyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { normalItem, hardItem, crazyItem });
             difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
             difficultyToolStripMenuItem.Size = new Size(86, 21);
@@ -177,8 +173,11 @@
             // 
             // normalItem
             // 
+            normalItem.Checked = true;
+            normalItem.CheckState = CheckState.Checked;
             normalItem.Name = "normalItem";
             normalItem.Size = new Size(180, 22);
+            normalItem.Tag = "10";
             normalItem.Text = "Normal";
             normalItem.Click += diffToolStrip_OnChange;
             // 
@@ -186,6 +185,7 @@
             // 
             hardItem.Name = "hardItem";
             hardItem.Size = new Size(180, 22);
+            hardItem.Tag = "8";
             hardItem.Text = "Hard";
             hardItem.Click += diffToolStrip_OnChange;
             // 
@@ -193,6 +193,7 @@
             // 
             crazyItem.Name = "crazyItem";
             crazyItem.Size = new Size(180, 22);
+            crazyItem.Tag = "6";
             crazyItem.Text = "Crazy";
             crazyItem.Click += diffToolStrip_OnChange;
             // 
@@ -236,7 +237,6 @@
         private Button subBtn;
         private Label endLabel;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripComboBox;
         private ToolStripMenuItem difficultyToolStripMenuItem;
         private ToolStripMenuItem normalItem;
         private ToolStripMenuItem hardItem;
