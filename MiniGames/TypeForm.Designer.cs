@@ -53,7 +53,7 @@
             inputBox.Enabled = false;
             inputBox.Location = new Point(160, 151);
             inputBox.Name = "inputBox";
-            inputBox.Size = new Size(251, 23);
+            inputBox.Size = new Size(226, 23);
             inputBox.TabIndex = 0;
             inputBox.KeyPress += inputBox_KeyPress;
             // 
@@ -112,7 +112,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(100, 106);
+            label3.Location = new Point(100, 104);
             label3.Name = "label3";
             label3.Size = new Size(57, 21);
             label3.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             timeLabel.AutoSize = true;
             timeLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            timeLabel.Location = new Point(157, 106);
+            timeLabel.Location = new Point(157, 104);
             timeLabel.Name = "timeLabel";
             timeLabel.Size = new Size(155, 21);
             timeLabel.TabIndex = 7;
@@ -176,7 +176,7 @@
             normalItem.Checked = true;
             normalItem.CheckState = CheckState.Checked;
             normalItem.Name = "normalItem";
-            normalItem.Size = new Size(180, 22);
+            normalItem.Size = new Size(120, 22);
             normalItem.Tag = "10";
             normalItem.Text = "Normal";
             normalItem.Click += diffToolStrip_OnChange;
@@ -184,7 +184,7 @@
             // hardItem
             // 
             hardItem.Name = "hardItem";
-            hardItem.Size = new Size(180, 22);
+            hardItem.Size = new Size(120, 22);
             hardItem.Tag = "8";
             hardItem.Text = "Hard";
             hardItem.Click += diffToolStrip_OnChange;
@@ -192,7 +192,7 @@
             // crazyItem
             // 
             crazyItem.Name = "crazyItem";
-            crazyItem.Size = new Size(180, 22);
+            crazyItem.Size = new Size(120, 22);
             crazyItem.Tag = "6";
             crazyItem.Text = "Crazy";
             crazyItem.Click += diffToolStrip_OnChange;
