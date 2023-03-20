@@ -1,5 +1,3 @@
-using MySql.Data.MySqlClient;
-
 namespace MiniGames
 {
     public partial class MainForm : Form

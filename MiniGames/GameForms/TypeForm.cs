@@ -14,7 +14,7 @@
         public TypeForm()
         {
             InitializeComponent();
-            typelist = File.ReadAllLines("D:\\code\\MiniGames\\MiniGames\\typelist.txt");
+            typelist = File.ReadAllLines("D:\\code\\MiniGames\\MiniGames\\Utils\\typelist.txt");
             listLength = typelist.Length;
             timeDelay = 10;
             timeCount = timeDelay;
@@ -23,14 +23,13 @@
             randomNum = 0;
             random = new Random();
             timeLabel.Text = timeDelay.ToString();
-
         }
 
         private void startBtn_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             startBtn.Visible = false;
-            subBtn.Visible = true;
+            doneBtn.Visible = true;
             difficultyToolStripMenuItem.Visible = false;
             inputBox.Enabled = true;
             inputBox.Focus();
@@ -42,10 +41,10 @@
         {
             timeLabel.Text = (--timeCount).ToString();
             if (timeCount < 0)
-                subBtn_Click(sender, e);
+               doneBtn_Click(sender, e);
         }
 
-        private void subBtn_Click(object sender, EventArgs e)
+        private void doneBtn_Click(object sender, EventArgs e)
         {
             timeLabel.Text = (timeCount = timeDelay).ToString();
             string input = inputBox.Text;
@@ -63,11 +62,10 @@
 
             if (++inputTimes == 10)
             {
-                subBtn.Visible = false;
+                doneBtn.Visible = false;
                 timer1.Enabled = false;
                 inputBox.Enabled = false;
                 endLabel.Text = "Game over! Correct: " + correctNum.ToString();
-
             }
         }
 
@@ -76,7 +74,7 @@
             if (e.KeyChar == System.Convert.ToChar(13))
             {
                 e.Handled = true;
-                subBtn_Click(sender, e);
+                doneBtn_Click(sender, e);
             }
         }
 

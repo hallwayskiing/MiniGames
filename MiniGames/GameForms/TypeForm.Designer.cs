@@ -38,7 +38,7 @@
             label3 = new Label();
             timeLabel = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            subBtn = new Button();
+            doneBtn = new Button();
             endLabel = new Label();
             menuStrip1 = new MenuStrip();
             difficultyToolStripMenuItem = new ToolStripMenuItem();
@@ -133,16 +133,16 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
-            // subBtn
+            // doneBtn
             // 
-            subBtn.Location = new Point(180, 203);
-            subBtn.Name = "subBtn";
-            subBtn.Size = new Size(75, 23);
-            subBtn.TabIndex = 8;
-            subBtn.Text = "Submit";
-            subBtn.UseVisualStyleBackColor = true;
-            subBtn.Visible = false;
-            subBtn.Click += subBtn_Click;
+            doneBtn.Location = new Point(180, 203);
+            doneBtn.Name = "doneBtn";
+            doneBtn.Size = new Size(75, 23);
+            doneBtn.TabIndex = 8;
+            doneBtn.Text = "Done";
+            doneBtn.UseVisualStyleBackColor = true;
+            doneBtn.Visible = false;
+            doneBtn.Click += doneBtn_Click;
             // 
             // endLabel
             // 
@@ -203,7 +203,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(448, 247);
             Controls.Add(endLabel);
-            Controls.Add(subBtn);
+            Controls.Add(doneBtn);
             Controls.Add(timeLabel);
             Controls.Add(label3);
             Controls.Add(startBtn);
@@ -234,7 +234,7 @@
         private Label label3;
         private Label timeLabel;
         private System.Windows.Forms.Timer timer1;
-        private Button subBtn;
+        private Button doneBtn;
         private Label endLabel;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem difficultyToolStripMenuItem;
