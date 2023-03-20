@@ -46,8 +46,6 @@
             ballBtn = new Button();
             backBtn = new Button();
             skipBtn = new Button();
-            guessFormBindingSource = new BindingSource(components);
-            ((System.ComponentModel.ISupportInitialize)guessFormBindingSource).BeginInit();
             SuspendLayout();
             // 
             // welcLabel
@@ -74,7 +72,7 @@
             // 
             regBtn.Location = new Point(218, 230);
             regBtn.Name = "regBtn";
-            regBtn.Size = new Size(95, 33);
+            regBtn.Size = new Size(95, 35);
             regBtn.TabIndex = 2;
             regBtn.Text = "Register";
             regBtn.UseVisualStyleBackColor = true;
@@ -229,10 +227,6 @@
             skipBtn.UseVisualStyleBackColor = true;
             skipBtn.Click += skipBtn_Click;
             // 
-            // guessFormBindingSource
-            // 
-            guessFormBindingSource.DataSource = typeof(GameForms.GuessForm);
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -258,7 +252,6 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MiniGames";
-            ((System.ComponentModel.ISupportInitialize)guessFormBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,6 +275,5 @@
         private Button ballBtn;
         private Button backBtn;
         private Button skipBtn;
-        private BindingSource guessFormBindingSource;
     }
 }
