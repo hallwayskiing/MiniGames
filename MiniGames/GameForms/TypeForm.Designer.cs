@@ -1,4 +1,4 @@
-﻿namespace MiniGames
+﻿namespace MiniGames.GameForms
 {
     partial class TypeForm
     {

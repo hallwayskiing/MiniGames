@@ -1,3 +1,6 @@
+using MiniGames.GameForms;
+using MiniGames.Utils;
+
 namespace MiniGames
 {
     public partial class MainForm : Form

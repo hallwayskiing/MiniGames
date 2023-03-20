@@ -1,3 +1,5 @@
+using MiniGames.GameForms;
+
 namespace MiniGames
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace MiniGames
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new TypeForm());
+            Application.Run(new GuessForm());
         }
     }
 }

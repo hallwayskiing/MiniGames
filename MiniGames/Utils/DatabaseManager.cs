@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
-namespace MiniGames
+namespace MiniGames.Utils
 {
     internal class DatabaseManager
     {
         private MySqlConnection? conn;
         public string ConnectionString { private get; set; }
-        
+
         public bool IsExistedUser(User user)
         {
             using (conn = new MySqlConnection(ConnectionString))
