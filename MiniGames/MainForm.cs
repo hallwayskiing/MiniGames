@@ -152,7 +152,7 @@ namespace MiniGames
             snakeBtn.Visible = true;
             ballBtn.Visible = true;
 
-            if (result == DialogResult.Retry)           
+            if (result == DialogResult.Retry)
                 gameBtn_Click(sender, e);
         }
 

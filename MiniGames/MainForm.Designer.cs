@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             welcLabel = new Label();
             logBtn = new Button();
             regBtn = new Button();
@@ -223,7 +222,7 @@
             skipBtn.Name = "skipBtn";
             skipBtn.Size = new Size(75, 23);
             skipBtn.TabIndex = 16;
-            skipBtn.Text = "skip";
+            skipBtn.Text = "SKIP";
             skipBtn.UseVisualStyleBackColor = true;
             skipBtn.Click += skipBtn_Click;
             // 
