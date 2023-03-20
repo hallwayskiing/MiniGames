@@ -2,8 +2,9 @@
 {
     public partial class GuessForm : Form
     {
-        private int randomNum;
+        private int randomNum;//[0,100]
         private int guessTimes;
+
         public GuessForm()
         {
             InitializeComponent();
