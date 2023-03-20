@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             welcLabel = new Label();
             logBtn = new Button();
             regBtn = new Button();
@@ -44,6 +45,9 @@
             snakeBtn = new Button();
             ballBtn = new Button();
             backBtn = new Button();
+            skipBtn = new Button();
+            guessFormBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)guessFormBindingSource).BeginInit();
             SuspendLayout();
             // 
             // welcLabel
@@ -166,6 +170,7 @@
             guessBtn.Text = "Guess";
             guessBtn.UseVisualStyleBackColor = true;
             guessBtn.Visible = false;
+            guessBtn.Click += gameBtn_Click;
             // 
             // typeBtn
             // 
@@ -177,7 +182,7 @@
             typeBtn.Text = "Type";
             typeBtn.UseVisualStyleBackColor = true;
             typeBtn.Visible = false;
-            typeBtn.Click += typeBtn_Click;
+            typeBtn.Click += gameBtn_Click;
             // 
             // snakeBtn
             // 
@@ -189,6 +194,7 @@
             snakeBtn.Text = "Snake";
             snakeBtn.UseVisualStyleBackColor = true;
             snakeBtn.Visible = false;
+            snakeBtn.Click += gameBtn_Click;
             // 
             // ballBtn
             // 
@@ -200,6 +206,7 @@
             ballBtn.Text = "Ball";
             ballBtn.UseVisualStyleBackColor = true;
             ballBtn.Visible = false;
+            ballBtn.Click += gameBtn_Click;
             // 
             // backBtn
             // 
@@ -212,11 +219,26 @@
             backBtn.Visible = false;
             backBtn.Click += backBtn_Click;
             // 
+            // skipBtn
+            // 
+            skipBtn.Location = new Point(449, 281);
+            skipBtn.Name = "skipBtn";
+            skipBtn.Size = new Size(75, 23);
+            skipBtn.TabIndex = 16;
+            skipBtn.Text = "skip";
+            skipBtn.UseVisualStyleBackColor = true;
+            skipBtn.Click += skipBtn_Click;
+            // 
+            // guessFormBindingSource
+            // 
+            guessFormBindingSource.DataSource = typeof(GameForms.GuessForm);
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(536, 316);
+            Controls.Add(skipBtn);
             Controls.Add(backBtn);
             Controls.Add(ballBtn);
             Controls.Add(snakeBtn);
@@ -236,6 +258,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MiniGames";
+            ((System.ComponentModel.ISupportInitialize)guessFormBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,5 +281,7 @@
         private Button snakeBtn;
         private Button ballBtn;
         private Button backBtn;
+        private Button skipBtn;
+        private BindingSource guessFormBindingSource;
     }
 }

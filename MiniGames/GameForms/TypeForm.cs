@@ -72,10 +72,8 @@ namespace MiniGames.GameForms
 
             if (++inputTimes == 10)
             {
-                doneBtn.Visible = false;
-                timer1.Enabled = false;
-                inputBox.Enabled = false;
-                endLabel.Text = "Game over! Correct: " + correctNum.ToString();
+                this.DialogResult = MessageBox.Show("Game over!\nCorrect number: " + correctNum, "Game over", MessageBoxButtons.RetryCancel);             
+                Close();
             }
         }
 

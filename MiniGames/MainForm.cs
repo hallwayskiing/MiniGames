@@ -122,19 +122,57 @@ namespace MiniGames
             logBtn.Visible = true;
         }
 
-        private void typeBtn_Click(object sender, EventArgs e)
+        private void gameBtn_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            DialogResult result = 0;
             guessBtn.Visible = false;
             typeBtn.Visible = false;
             snakeBtn.Visible = false;
-            ballBtn.Visible=false;
+            ballBtn.Visible = false;
             this.Visible = false;
-            new TypeForm().ShowDialog();
+            switch (button.Text)
+            {
+                case "Guess":
+                    result = new GuessForm().ShowDialog();
+                    break;
+                case "Type":
+                    result = new TypeForm().ShowDialog();
+                    break;
+                case "Snake":
+                    //result = new SnakeForm().ShowDialog();
+                    break;
+                case "Ball":
+                    //result = new BallForm().ShowDialog();
+                    break;
+            }
             this.Visible = true;
             guessBtn.Visible = true;
             typeBtn.Visible = true;
             snakeBtn.Visible = true;
             ballBtn.Visible = true;
+            if (result == DialogResult.Retry)
+            {
+                gameBtn_Click(sender, e);
+            }
+        }
+
+        private void skipBtn_Click(object sender, EventArgs e)
+        {
+            typeBtn.Visible = true;
+            guessBtn.Visible = true;
+            snakeBtn.Visible = true;
+            ballBtn.Visible = true;
+            welcLabel.Text = "Select one game:";
+            userLabel.Visible = false;
+            pwdLabel.Visible = false;
+            userBox.Visible = false;
+            pwdBox.Visible = false;
+            logOK.Visible = false;
+            backBtn.Visible = false;
+            logBtn.Visible = false;
+            regBtn.Visible = false;
+            skipBtn.Visible = false;
         }
     }
 }
