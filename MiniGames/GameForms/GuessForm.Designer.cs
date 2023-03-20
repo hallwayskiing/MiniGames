@@ -62,6 +62,7 @@
             inputBox.Name = "inputBox";
             inputBox.Size = new Size(90, 23);
             inputBox.TabIndex = 2;
+            inputBox.KeyPress += inputBox_KeyPress;
             // 
             // confirmBtn
             // 

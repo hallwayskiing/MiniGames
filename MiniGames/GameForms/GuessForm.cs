@@ -2,29 +2,25 @@
 {
     public partial class GuessForm : Form
     {
-        private int random;
+        private int randomNum;
         private int guessTimes;
         public GuessForm()
         {
             InitializeComponent();
-            random = new Random().Next(101);
+            randomNum = new Random().Next(101);
             guessTimes = 0;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            if (++guessTimes == 11)
-            {
-                this.DialogResult = MessageBox.Show("You lose!", "Loser", MessageBoxButtons.RetryCancel);
-                Close();
-            }
+            guessTimes++;
 
             int input;
             try
             {
                 input = int.Parse(inputBox.Text);
-                if (input > 100)
-                    throw new Exception("Input too large!");
+                if (input > 100 || input < 0)
+                    throw new Exception("Input out of range!");
             }
             catch (Exception ex)
             {
@@ -34,9 +30,10 @@
             finally
             {
                 inputBox.Clear();
+                inputBox.Focus();
             }
 
-            if (input == random)
+            if (input == randomNum)
             {
                 string winText = "You win!\nGuess times: " + guessTimes + "\n";
                 switch (guessTimes)
@@ -55,9 +52,21 @@
                 this.DialogResult = MessageBox.Show(winText, "Winner", MessageBoxButtons.RetryCancel);
                 Close();
             }
-            else
+            else if (guessTimes == 10)
             {
-                tipLabel.Text = (input < random ? "Larger" : "Smaller") + " than " + input + "!";
+
+                this.DialogResult = MessageBox.Show("You lose!", "Loser", MessageBoxButtons.RetryCancel);
+                Close();
+            }
+            else tipLabel.Text = (input < randomNum ? "Larger" : "Smaller") + " than " + input + "!";
+        }
+
+        private void inputBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == System.Convert.ToChar(13))
+            {
+                e.Handled = true;
+                confirmBtn_Click(sender, e);
             }
         }
     }
