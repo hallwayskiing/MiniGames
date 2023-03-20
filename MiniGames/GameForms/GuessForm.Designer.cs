@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(422, 229);
             Name = "GuessForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GuessForm";
             ResumeLayout(false);
         }
