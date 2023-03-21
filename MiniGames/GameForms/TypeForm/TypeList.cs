@@ -15,8 +15,8 @@
         }
         public string GetRandomLine()
         {
-            string line= list[random.Next(list.Count)];
-            return line==lastLine?GetRandomLine() : lastLine=line;
+            string line = list[random.Next(list.Count)];
+            return line == lastLine ? GetRandomLine() : lastLine = line;
         }
     }
 }

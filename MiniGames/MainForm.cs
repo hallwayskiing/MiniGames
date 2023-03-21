@@ -1,4 +1,3 @@
-using MiniGames.GameForms;
 using MiniGames.Utils;
 
 namespace MiniGames
@@ -10,6 +9,9 @@ namespace MiniGames
         {
             InitializeComponent();
             databaseManager = new DatabaseManager("server=localhost;port=3306;database=login;user=root;password=053111;");
+#if DEBUG
+            skipBtn.Visible = true;
+#endif
         }
 
         private void logBtn_Click(object sender, EventArgs e)
@@ -44,7 +46,8 @@ namespace MiniGames
             {
                 string username = userBox.Text;
                 string password = pwdBox.Text;
-                if (username.Length == 0 || password.Length == 0) throw new Exception("Username or password cannot be empty!");
+                if (username.Length == 0 || password.Length == 0)
+                    throw new Exception("Username or password cannot be empty!");
                 User user = new User(username, password);
                 if (databaseManager.IsExistedUser(user))
                 {
@@ -61,10 +64,7 @@ namespace MiniGames
                     logOK.Visible = false;
                     backBtn.Visible = false;
                 }
-                else
-                {
-                    throw new Exception("Wrong username or password!");
-                }
+                else throw new Exception("Wrong username or password!");
             }
             catch (Exception ex)
             {
@@ -73,7 +73,6 @@ namespace MiniGames
                 pwdBox.Clear();
                 return;
             }
-
         }
 
         private void regOK_Click(object sender, EventArgs e)
@@ -125,27 +124,17 @@ namespace MiniGames
         private void gameBtn_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            DialogResult result = 0;
+            DialogResult? result;
             guessBtn.Visible = false;
             typeBtn.Visible = false;
             snakeBtn.Visible = false;
             ballBtn.Visible = false;
             this.Visible = false;
-            switch (button.Text)
-            {
-                case "Guess":
-                    result = new GuessForm().ShowDialog();
-                    break;
-                case "Type":
-                    result = new TypeForm().ShowDialog();
-                    break;
-                case "Snake":
-                    //result = new SnakeForm().ShowDialog();
-                    break;
-                case "Ball":
-                    //result = new BallForm().ShowDialog();
-                    break;
-            }
+
+            Type? type = Type.GetType("MiniGames.GameForms." + button.Text + "Form");
+            Form? form = type != null ? Activator.CreateInstance(type) as Form : null;
+            result = form?.ShowDialog();
+
             this.Visible = true;
             guessBtn.Visible = true;
             typeBtn.Visible = true;

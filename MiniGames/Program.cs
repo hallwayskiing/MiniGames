@@ -1,5 +1,3 @@
-using MiniGames.GameForms;
-
 namespace MiniGames
 {
     internal static class Program

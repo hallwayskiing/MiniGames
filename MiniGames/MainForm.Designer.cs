@@ -224,6 +224,7 @@
             skipBtn.TabIndex = 16;
             skipBtn.Text = "SKIP";
             skipBtn.UseVisualStyleBackColor = true;
+            skipBtn.Visible = false;
             skipBtn.Click += skipBtn_Click;
             // 
             // MainForm
