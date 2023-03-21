@@ -10,7 +10,7 @@
 
         public TypeList()
         {
-            list = File.ReadAllLines("D:\\code\\MiniGames\\MiniGames\\Utils\\typelist.txt").ToList();
+            list = File.ReadAllLines(@"../../../GameForms/TypeForm/typelist.txt").ToList();
             random = new Random();
         }
         public string GetRandomLine()
