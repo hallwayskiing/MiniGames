@@ -30,13 +30,13 @@ namespace MiniGames.GameForms
 
         private void startBtn_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            typeTimer.Enabled = true;
             startBtn.Visible = false;
             doneBtn.Visible = true;
             difficultyToolStripMenuItem.Visible = false;
             inputBox.Enabled = true;
             inputBox.Focus();
-            showLabel.Text=typeList.GetRandomLine();
+            showLabel.Text = typeList.GetRandomLine();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

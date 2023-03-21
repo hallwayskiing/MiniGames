@@ -105,7 +105,7 @@
             Controls.Add(label1);
             Name = "GuessForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "GuessForm";
+            Text = "Guess";
             ResumeLayout(false);
             PerformLayout();
         }

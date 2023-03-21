@@ -31,29 +31,28 @@
             components = new System.ComponentModel.Container();
             inputBox = new TextBox();
             label1 = new Label();
-            label2 = new Label();
             showLabel = new Label();
             label4 = new Label();
             startBtn = new Button();
             label3 = new Label();
             timeLabel = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
+            typeTimer = new System.Windows.Forms.Timer(components);
             doneBtn = new Button();
             endLabel = new Label();
-            menuStrip1 = new MenuStrip();
+            typeMenuStrip = new MenuStrip();
             difficultyToolStripMenuItem = new ToolStripMenuItem();
             normalItem = new ToolStripMenuItem();
             hardItem = new ToolStripMenuItem();
             crazyItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            typeMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // inputBox
             // 
             inputBox.Enabled = false;
-            inputBox.Location = new Point(160, 151);
+            inputBox.Location = new Point(89, 148);
             inputBox.Name = "inputBox";
-            inputBox.Size = new Size(226, 23);
+            inputBox.Size = new Size(268, 23);
             inputBox.TabIndex = 0;
             inputBox.KeyPress += inputBox_KeyPress;
             // 
@@ -61,46 +60,37 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(192, 9);
+            label1.Location = new Point(190, 9);
             label1.Name = "label1";
             label1.Size = new Size(63, 28);
             label1.TabIndex = 1;
             label1.Text = "Type";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(73, 58);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Sentence:";
-            // 
             // showLabel
             // 
+            showLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             showLabel.AutoEllipsis = true;
-            showLabel.AutoSize = true;
-            showLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            showLabel.Location = new Point(157, 58);
+            showLabel.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            showLabel.Location = new Point(12, 61);
             showLabel.Name = "showLabel";
-            showLabel.Size = new Size(186, 21);
+            showLabel.Size = new Size(424, 30);
             showLabel.TabIndex = 3;
             showLabel.Text = "Type the same as here!";
+            showLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(107, 150);
+            label4.Location = new Point(87, 114);
             label4.Name = "label4";
-            label4.Size = new Size(50, 21);
+            label4.Size = new Size(89, 21);
             label4.TabIndex = 4;
-            label4.Text = "Type:";
+            label4.Text = "Type here:";
             // 
             // startBtn
             // 
-            startBtn.Location = new Point(180, 203);
+            startBtn.Location = new Point(180, 209);
             startBtn.Name = "startBtn";
             startBtn.Size = new Size(75, 23);
             startBtn.TabIndex = 5;
@@ -112,7 +102,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(100, 104);
+            label3.Location = new Point(283, 174);
             label3.Name = "label3";
             label3.Size = new Size(57, 21);
             label3.TabIndex = 6;
@@ -122,20 +112,21 @@
             // 
             timeLabel.AutoSize = true;
             timeLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            timeLabel.Location = new Point(157, 104);
+            timeLabel.Location = new Point(334, 174);
             timeLabel.Name = "timeLabel";
             timeLabel.Size = new Size(28, 21);
             timeLabel.TabIndex = 7;
             timeLabel.Text = "10";
+            timeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // timer1
+            // typeTimer
             // 
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            typeTimer.Interval = 1000;
+            typeTimer.Tick += timer1_Tick;
             // 
             // doneBtn
             // 
-            doneBtn.Location = new Point(180, 203);
+            doneBtn.Location = new Point(180, 209);
             doneBtn.Name = "doneBtn";
             doneBtn.Size = new Size(75, 23);
             doneBtn.TabIndex = 8;
@@ -153,14 +144,14 @@
             endLabel.Size = new Size(0, 21);
             endLabel.TabIndex = 9;
             // 
-            // menuStrip1
+            // typeMenuStrip
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { difficultyToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(448, 25);
-            menuStrip1.TabIndex = 10;
-            menuStrip1.Text = "menuStrip1";
+            typeMenuStrip.Items.AddRange(new ToolStripItem[] { difficultyToolStripMenuItem });
+            typeMenuStrip.Location = new Point(0, 0);
+            typeMenuStrip.Name = "typeMenuStrip";
+            typeMenuStrip.Size = new Size(448, 25);
+            typeMenuStrip.TabIndex = 10;
+            typeMenuStrip.Text = "menuStrip1";
             // 
             // difficultyToolStripMenuItem
             // 
@@ -209,16 +200,15 @@
             Controls.Add(startBtn);
             Controls.Add(label4);
             Controls.Add(showLabel);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(inputBox);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(typeMenuStrip);
+            MainMenuStrip = typeMenuStrip;
             Name = "TypeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Type";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            typeMenuStrip.ResumeLayout(false);
+            typeMenuStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,16 +217,15 @@
 
         private TextBox inputBox;
         private Label label1;
-        private Label label2;
         private Label showLabel;
         private Label label4;
         private Button startBtn;
         private Label label3;
         private Label timeLabel;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer typeTimer;
         private Button doneBtn;
         private Label endLabel;
-        private MenuStrip menuStrip1;
+        private MenuStrip typeMenuStrip;
         private ToolStripMenuItem difficultyToolStripMenuItem;
         private ToolStripMenuItem normalItem;
         private ToolStripMenuItem hardItem;
