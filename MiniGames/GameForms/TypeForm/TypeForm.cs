@@ -12,27 +12,20 @@ namespace MiniGames.GameForms
 {
     public partial class TypeForm : Form
     {
-        string[] typelist;
         int timeCount;
         int timeDelay;
-        int listLength;
         int correctNum;
         int inputTimes;
-        int randomNum;
-        Random random;
+        TypeList typeList;
 
         public TypeForm()
         {
             InitializeComponent();
-            typelist = File.ReadAllLines("D:\\code\\MiniGames\\MiniGames\\Utils\\typelist.txt");
-            listLength = typelist.Length;
             timeDelay = 10;
             timeCount = timeDelay;
             correctNum = 0;
             inputTimes = 0;
-            randomNum = 0;
-            random = new Random();
-            timeLabel.Text = timeDelay.ToString();
+            typeList = new TypeList();
         }
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -43,15 +36,14 @@ namespace MiniGames.GameForms
             difficultyToolStripMenuItem.Visible = false;
             inputBox.Enabled = true;
             inputBox.Focus();
-            randomNum = random.Next(listLength);
-            showLabel.Text = typelist[randomNum];
+            showLabel.Text=typeList.GetRandomLine();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = (--timeCount).ToString();
             if (timeCount < 0)
-               doneBtn_Click(sender, e);
+                doneBtn_Click(sender, e);
         }
 
         private void doneBtn_Click(object sender, EventArgs e)
@@ -62,17 +54,11 @@ namespace MiniGames.GameForms
                 correctNum++;
             inputBox.Clear();
 
-            int tmp;
-            do
-            {
-                tmp = random.Next(listLength);
-            } while (tmp == randomNum);
-            randomNum = tmp;
-            showLabel.Text = typelist[randomNum];
+            showLabel.Text = typeList.GetRandomLine();
 
             if (++inputTimes == 10)
             {
-                this.DialogResult = MessageBox.Show("Game over!\nCorrect number: " + correctNum, "Game over", MessageBoxButtons.RetryCancel);             
+                this.DialogResult = MessageBox.Show("Game over!\nCorrect number: " + correctNum, "Game over", MessageBoxButtons.RetryCancel);
                 Close();
             }
         }

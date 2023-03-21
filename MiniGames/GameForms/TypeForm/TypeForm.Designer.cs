@@ -124,9 +124,9 @@
             timeLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             timeLabel.Location = new Point(157, 104);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(155, 21);
+            timeLabel.Size = new Size(28, 21);
             timeLabel.TabIndex = 7;
-            timeLabel.Text = "Value of timeDelay";
+            timeLabel.Text = "10";
             // 
             // timer1
             // 
