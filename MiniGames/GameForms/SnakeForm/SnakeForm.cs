@@ -33,7 +33,8 @@
             catch(Exception ex)
             {
                 timer.Stop();
-                MessageBox.Show("Game over!\n" + ex.Message, "Game over", MessageBoxButtons.RetryCancel);
+                this.DialogResult = MessageBox.Show("Game over!\n" + ex.Message, "Game over", MessageBoxButtons.RetryCancel);
+                Close();
             }
         }
 
