@@ -20,7 +20,7 @@
         private void timer_Tick(object sender, EventArgs e)
         {
             snake.Move();
-            if (CheckFood())
+            if (HasEaten())
             {
                 scoreItem.Text = "Score:" + ++score;
                 Label label = new Label();
@@ -31,7 +31,7 @@
 
             try
             {
-                CheckBorder();
+                this.CheckBorder();
                 snake.CheckBody();
             }
             catch (Exception ex)
@@ -42,7 +42,7 @@
             }
         }
 
-        private bool CheckFood()
+        private bool HasEaten()
         {
             if (Math.Abs(snake.GetHead().X - foodLabel.Location.X) < 8 &&
                 Math.Abs(snake.GetHead().Y - foodLabel.Location.Y) < 8)
