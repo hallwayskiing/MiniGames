@@ -58,20 +58,21 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(190, 9);
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Font = new Font("Segoe Print", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(89, 9);
             label1.Name = "label1";
-            label1.Size = new Size(63, 28);
+            label1.Size = new Size(251, 60);
             label1.TabIndex = 1;
             label1.Text = "Type";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // showLabel
             // 
             showLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             showLabel.AutoEllipsis = true;
             showLabel.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            showLabel.Location = new Point(12, 61);
+            showLabel.Location = new Point(12, 72);
             showLabel.Name = "showLabel";
             showLabel.Size = new Size(424, 30);
             showLabel.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(87, 114);
+            label4.Location = new Point(87, 117);
             label4.Name = "label4";
             label4.Size = new Size(89, 21);
             label4.TabIndex = 4;

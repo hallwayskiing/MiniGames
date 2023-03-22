@@ -38,13 +38,14 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(169, 26);
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Font = new Font("MV Boli", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(3, 13);
             label1.Name = "label1";
-            label1.Size = new Size(80, 28);
+            label1.Size = new Size(417, 54);
             label1.TabIndex = 0;
-            label1.Text = "Guess:";
+            label1.Text = "Guess";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
