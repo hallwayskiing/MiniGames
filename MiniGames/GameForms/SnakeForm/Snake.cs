@@ -2,7 +2,7 @@
 {
     internal class Snake
     {
-        public List<Label> body;
+        private List<Label> body;
 
         Direction direction;
 
@@ -14,14 +14,17 @@
             direction = Direction.RIGHT;
         }
 
+        public Point GetHead()
+        {
+            return body[0].Location;
+        }
+
         public void Move()
         {
             for (int i = body.Count - 1; i > 0; i--)
-            {
                 body[i].Location = body[i - 1].Location;
-            }
 
-            Point pos = body[0].Location;
+            Point pos = GetHead();
             switch (direction)
             {
                 case Direction.UP:
@@ -63,9 +66,22 @@
             }
         }
 
-        public void Eat()
+        public void GrowWith(Label label)
         {
+            label.AutoSize = true;
+            label.Text = "█";
+            label.Location = body[^1].Location;
+            body.Add(label);
+        }
 
+        public void CheckBody()
+        {
+            Point head = GetHead();
+            for (int i = 1; i < body.Count; i++)
+            {
+                if (head.Equals(body[i].Location))
+                    throw new Exception("Crash into yourself!");
+            }
         }
     }
 }

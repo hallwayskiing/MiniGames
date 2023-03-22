@@ -17,20 +17,39 @@
         private void timer_Tick(object sender, EventArgs e)
         {
             snake.Move();
-            if (Check())
+            if (CheckFood())
             {
-                snake.Eat();
+                Label label = new Label();              
+                Controls.Add(label);
                 food.create();
+                snake.GrowWith(label);
+            }
+
+            try
+            {
+                CheckBorder();
+                snake.CheckBody();
+            }
+            catch(Exception ex)
+            {
+                timer.Stop();
+                MessageBox.Show("Game over!\n" + ex.Message, "Game over", MessageBoxButtons.RetryCancel);
             }
         }
 
-        private bool Check()
+        private bool CheckFood()
         {
-            int snakeX = snake.body[0].Location.X;
-            int snakeY = snake.body[0].Location.Y;
-            if (Math.Abs(snakeX - foodLabel.Location.X) < 10 && Math.Abs(snakeY - foodLabel.Location.Y) < 10)
+            if (Math.Abs(snake.GetHead().X - foodLabel.Location.X) < 10 &&
+                Math.Abs(snake.GetHead().Y - foodLabel.Location.Y) < 10)
                 return true;
             return false;
+        }
+
+        private void CheckBorder()
+        {
+            Point pos = snake.GetHead();
+            if (pos.X < 0 || pos.X > this.ClientSize.Width || pos.Y < 0 || pos.Y > this.ClientSize.Width)
+                throw new Exception("Crash into border!");
         }
 
         private void SnakeForm_KeyPress(object sender, KeyPressEventArgs e)
