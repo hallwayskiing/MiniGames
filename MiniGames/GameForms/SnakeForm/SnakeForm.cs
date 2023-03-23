@@ -53,7 +53,7 @@
         private void CheckBorder()
         {
             Point pos = snake.GetHead();
-            if (pos.X < 0 || pos.X > this.ClientSize.Width - 20 || pos.Y < 0 || pos.Y > this.ClientSize.Height - 20)
+            if (pos.X < 0 || pos.X > ClientSize.Width - 20 || pos.Y < 0 || pos.Y > ClientSize.Height - 20)
                 throw new Exception("Crash into border!");
         }
 
@@ -101,11 +101,6 @@
                 timer.Start();
                 stopItem.Text = "Stop(&P)";
             }
-        }
-
-        private void turnTimer_Tick(object sender, EventArgs e)
-        {
-
         }
     }
 }

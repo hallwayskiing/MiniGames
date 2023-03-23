@@ -4,7 +4,7 @@
     {
         private List<Label> body;
 
-        Direction direction,preDirection;
+        Direction direction, preDirection;
 
         enum Direction { UP, DOWN, LEFT, RIGHT }
 
@@ -22,9 +22,9 @@
 
         public void Move()
         {
-            if((direction == Direction.UP&&preDirection==Direction.DOWN)||
-                (direction == Direction.DOWN && preDirection == Direction.UP)||
-                (direction == Direction.RIGHT && preDirection == Direction.LEFT)||
+            if ((direction == Direction.UP && preDirection == Direction.DOWN) ||
+                (direction == Direction.DOWN && preDirection == Direction.UP) ||
+                (direction == Direction.RIGHT && preDirection == Direction.LEFT) ||
                 (direction == Direction.LEFT && preDirection == Direction.RIGHT))
             {
                 direction = preDirection;
@@ -58,10 +58,10 @@
         {
             switch (char.ToUpper(key))
             {
-                case 'W':                   
+                case 'W':
                     direction = Direction.UP;
                     break;
-                case 'A':                  
+                case 'A':
                     direction = Direction.LEFT;
                     break;
                 case 'S':
