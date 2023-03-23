@@ -103,5 +103,9 @@
             }
         }
 
+        private void turnTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

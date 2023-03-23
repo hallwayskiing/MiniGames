@@ -60,9 +60,9 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Segoe Print", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(89, 9);
+            label1.Location = new Point(104, 9);
             label1.Name = "label1";
-            label1.Size = new Size(251, 60);
+            label1.Size = new Size(236, 60);
             label1.TabIndex = 1;
             label1.Text = "Type";
             label1.TextAlign = ContentAlignment.MiddleCenter;

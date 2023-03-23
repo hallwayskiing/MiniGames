@@ -51,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(104, 123);
+            label2.Location = new Point(104, 129);
             label2.Name = "label2";
             label2.Size = new Size(98, 21);
             label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // inputBox
             // 
-            inputBox.Location = new Point(208, 124);
+            inputBox.Location = new Point(208, 130);
             inputBox.Name = "inputBox";
             inputBox.Size = new Size(90, 23);
             inputBox.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(82, 80);
+            label3.Location = new Point(82, 86);
             label3.Name = "label3";
             label3.Size = new Size(263, 21);
             label3.TabIndex = 4;
