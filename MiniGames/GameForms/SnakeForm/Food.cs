@@ -21,9 +21,10 @@ namespace MiniGames.GameForms
             random = new Random();
         }
 
-        public void create()
+        public void Create()
         {
-            food.Location = new Point(random.Next(100,size.Width-100), random.Next(50,size.Height-50));
+            //food.Location = new Point(random.Next(100,size.Width-100), random.Next(50,size.Height-50));
+            food.Location = new Point(366, random.Next(50, size.Height - 50));
         }
     }
 }

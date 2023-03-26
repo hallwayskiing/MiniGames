@@ -43,6 +43,7 @@
             crazyToolStripMenuItem = new ToolStripMenuItem();
             stopItem = new ToolStripMenuItem();
             scoreItem = new ToolStripMenuItem();
+            autoAToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             foodLabel.Size = new Size(18, 17);
             foodLabel.TabIndex = 1;
             foodLabel.Text = "★";
+            foodLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -67,6 +69,7 @@
             label3.Size = new Size(17, 17);
             label3.TabIndex = 2;
             label3.Text = "█";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -76,6 +79,7 @@
             label2.Size = new Size(17, 17);
             label2.TabIndex = 3;
             label2.Text = "█";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -86,6 +90,7 @@
             label1.Size = new Size(17, 17);
             label1.TabIndex = 4;
             label1.Text = "█";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // topLabel
             // 
@@ -110,7 +115,7 @@
             // 
             // menuStrip
             // 
-            menuStrip.Items.AddRange(new ToolStripItem[] { speedMenu, stopItem, scoreItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { speedMenu, stopItem, scoreItem, autoAToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(499, 25);
@@ -165,6 +170,13 @@
             scoreItem.Size = new Size(63, 21);
             scoreItem.Text = "Score:0";
             // 
+            // autoAToolStripMenuItem
+            // 
+            autoAToolStripMenuItem.Name = "autoAToolStripMenuItem";
+            autoAToolStripMenuItem.Size = new Size(63, 21);
+            autoAToolStripMenuItem.Text = "Auto(&A)";
+            autoAToolStripMenuItem.Click += autoAToolStripMenuItem_Click;
+            // 
             // SnakeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -206,5 +218,6 @@
         private ToolStripMenuItem crazyToolStripMenuItem;
         private ToolStripMenuItem stopItem;
         private ToolStripMenuItem scoreItem;
+        private ToolStripMenuItem autoAToolStripMenuItem;
     }
 }

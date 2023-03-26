@@ -3,11 +3,9 @@
     internal class Snake
     {
         private List<Label> body;
-
-        Direction direction, preDirection;
-
-        enum Direction { UP, DOWN, LEFT, RIGHT }
-
+ 
+        public Direction direction,preDirection;
+        public enum Direction { UP, DOWN, LEFT, RIGHT }
         public Snake(List<Label> snakeBody)
         {
             body = snakeBody;
