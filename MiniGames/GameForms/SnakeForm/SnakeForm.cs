@@ -31,30 +31,27 @@
                 case Mode.NORMAL:
                     break;
                 case Mode.AUTO:
-                    Point head=snake.GetHead();
+                    Point head = snake.GetHead();
                     if (snake.direction == Snake.Direction.LEFT || snake.direction == Snake.Direction.RIGHT)
                     {
-                        if (head.Y < foodLabel.Location.Y - 8)
+                        if (head.Y < foodLabel.Location.Y)
                             snake.Turn('S');
-                        else if (head.Y > foodLabel.Location.Y + 8)
+                        else if (head.Y > foodLabel.Location.Y)
                             snake.Turn('W');
+                        else if ((snake.direction == Snake.Direction.LEFT && head.X < foodLabel.Location.X) ||
+                         (snake.direction == Snake.Direction.RIGHT && head.X > foodLabel.Location.X))
+                            snake.Turn('S');
                     }
                     else
                     {
-                        if (head.X < foodLabel.Location.X - 8)
+                        if (head.X < foodLabel.Location.X)
                             snake.Turn('D');
-                        else if (head.X > foodLabel.Location.X + 8)
+                        else if (head.X > foodLabel.Location.X)
                             snake.Turn('A');
+                        else if ((snake.direction == Snake.Direction.UP && head.Y < foodLabel.Location.Y) ||
+                         (snake.direction == Snake.Direction.DOWN && head.Y > foodLabel.Location.Y))
+                            snake.Turn('D');
                     }
-
-                    if (Math.Abs(head.Y - foodLabel.Location.Y) < 8 && 
-                        ((snake.direction == Snake.Direction.LEFT && head.X < foodLabel.Location.X - 8) ||
-                         (snake.direction == Snake.Direction.RIGHT && head.X > foodLabel.Location.X + 8)))
-                        snake.Turn('S');
-                    if (Math.Abs(head.X - foodLabel.Location.X) < 8 && 
-                        ((snake.direction == Snake.Direction.UP && head.Y < foodLabel.Location.Y - 8) ||
-                         (snake.direction == Snake.Direction.DOWN && head.Y > foodLabel.Location.Y + 8)))
-                        snake.Turn('D');
                     break;
             }
 
@@ -84,8 +81,8 @@
 
         private bool HasEaten()
         {
-            if (Math.Abs(snake.GetHead().X - foodLabel.Location.X) < 10 &&
-                Math.Abs(snake.GetHead().Y - foodLabel.Location.Y) < 10)
+            if (snake.GetHead().X == foodLabel.Location.X &&
+                snake.GetHead().Y == foodLabel.Location.Y)
                 return true;
             return false;
         }

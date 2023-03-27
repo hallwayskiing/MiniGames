@@ -41,6 +41,7 @@
             normalToolStripMenuItem = new ToolStripMenuItem();
             fastToolStripMenuItem = new ToolStripMenuItem();
             crazyToolStripMenuItem = new ToolStripMenuItem();
+            maxToolStripMenuItem = new ToolStripMenuItem();
             stopItem = new ToolStripMenuItem();
             scoreItem = new ToolStripMenuItem();
             autoAToolStripMenuItem = new ToolStripMenuItem();
@@ -54,7 +55,7 @@
             // foodLabel
             // 
             foodLabel.AutoSize = true;
-            foodLabel.Location = new Point(366, 167);
+            foodLabel.Location = new Point(360, 165);
             foodLabel.Name = "foodLabel";
             foodLabel.Size = new Size(18, 17);
             foodLabel.TabIndex = 1;
@@ -64,7 +65,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(104, 167);
+            label3.Location = new Point(105, 165);
             label3.Name = "label3";
             label3.Size = new Size(17, 17);
             label3.TabIndex = 2;
@@ -74,7 +75,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(119, 167);
+            label2.Location = new Point(120, 165);
             label2.Name = "label2";
             label2.Size = new Size(17, 17);
             label2.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(134, 167);
+            label1.Location = new Point(135, 165);
             label1.Name = "label1";
             label1.Size = new Size(17, 17);
             label1.TabIndex = 4;
@@ -124,7 +125,7 @@
             // 
             // speedMenu
             // 
-            speedMenu.DropDownItems.AddRange(new ToolStripItem[] { normalToolStripMenuItem, fastToolStripMenuItem, crazyToolStripMenuItem });
+            speedMenu.DropDownItems.AddRange(new ToolStripItem[] { normalToolStripMenuItem, fastToolStripMenuItem, crazyToolStripMenuItem, maxToolStripMenuItem });
             speedMenu.Name = "speedMenu";
             speedMenu.Size = new Size(72, 21);
             speedMenu.Text = "Speed(&S)";
@@ -134,7 +135,7 @@
             normalToolStripMenuItem.Checked = true;
             normalToolStripMenuItem.CheckState = CheckState.Checked;
             normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            normalToolStripMenuItem.Size = new Size(120, 22);
+            normalToolStripMenuItem.Size = new Size(180, 22);
             normalToolStripMenuItem.Tag = "200";
             normalToolStripMenuItem.Text = "Normal";
             normalToolStripMenuItem.Click += speedChange;
@@ -142,7 +143,7 @@
             // fastToolStripMenuItem
             // 
             fastToolStripMenuItem.Name = "fastToolStripMenuItem";
-            fastToolStripMenuItem.Size = new Size(120, 22);
+            fastToolStripMenuItem.Size = new Size(180, 22);
             fastToolStripMenuItem.Tag = "150";
             fastToolStripMenuItem.Text = "Fast";
             fastToolStripMenuItem.Click += speedChange;
@@ -150,10 +151,18 @@
             // crazyToolStripMenuItem
             // 
             crazyToolStripMenuItem.Name = "crazyToolStripMenuItem";
-            crazyToolStripMenuItem.Size = new Size(120, 22);
+            crazyToolStripMenuItem.Size = new Size(180, 22);
             crazyToolStripMenuItem.Tag = "100";
             crazyToolStripMenuItem.Text = "Crazy";
             crazyToolStripMenuItem.Click += speedChange;
+            // 
+            // maxToolStripMenuItem
+            // 
+            maxToolStripMenuItem.Name = "maxToolStripMenuItem";
+            maxToolStripMenuItem.Size = new Size(180, 22);
+            maxToolStripMenuItem.Tag = "1";
+            maxToolStripMenuItem.Text = "Max";
+            maxToolStripMenuItem.Click += speedChange;
             // 
             // stopItem
             // 
@@ -219,5 +228,6 @@
         private ToolStripMenuItem stopItem;
         private ToolStripMenuItem scoreItem;
         private ToolStripMenuItem autoAToolStripMenuItem;
+        private ToolStripMenuItem maxToolStripMenuItem;
     }
 }
